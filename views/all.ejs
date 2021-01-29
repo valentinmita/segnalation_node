@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=h1, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div class="container bg-light">
+      <div class="nav justify-content-center  mt-4">
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link active" href="/"><h1>HOME</h1></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/all"><h1>All Post</h1></a>
+          </li>
+        </ul>
+      </div>
+      <hr />
+
+      <h1>Segnalation</h1>
+      <% if(records.length >0){ %> <% records.forEach(function(row){ %>
+
+      <div class="card m-2">
+        <div class="card-body">
+          <div class="card-header text-center"><h1><%= row.title %></h1></div>
+          <div class="card-text"><h2>causa: <%= row.causa %></h2></div>
+          <div class="card-text"><h2>luogo: <%= row.luogo %></h2></div>
+          <img src="<%= row.file %> " alt="" width="200px;" />
+          <div class="card-text text-center"><p>data: <%= row.data %></p></div>
+        </div>
+      </div>
+      <%})}else{%>
+      <h1>no segnalation</h1>
+      <%}%>
+    </div>
+  </body>
+  
+<footer>
+  <div class="container mt-5 text-center">
+      <div class="mx-auto" style="width: 300px">
+          <button type="button" class="btn btn-light btn-lg">
+              <a class="logo" href="https://www.facebook.com/valentin.mita/">
+                  <i class="fab fa fa-facebook"></i>
+              </a>
+          </button>
+          <button type="button" class="btn btn-light btn-lg m-2">
+              <a class="logo" href="https://www.instagram.com/valentinmita/">
+                  <i class="fab fa fa-instagram"></i>
+              </a>
+          </button>
+          <button type="button" class="btn btn-light btn-lg">
+              <a class="logo" href="https://github.com/valentinmita">
+                  <i class="fab fa fa-github"></i>
+              </a>
+          </button>
+          <button type="button" class="btn btn-light btn-lg">
+              <a class="logo" href="https://www.linkedin.com/in/valentinmita/">
+                  <i class="fab fa fa-linkedin"></i>
+              </a>
+          </button>
+      </div>
+      <h1 class="mx-auto text-center" style="max-width: 600px">
+          Made by Valentin Mita for
+          <button class="btn btn-success"> start2Impact
+      </h1>
+  </div>
+</footer>
+</html>
